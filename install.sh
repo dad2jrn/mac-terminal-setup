@@ -17,7 +17,10 @@ fi
 # check if zsh is installed
 if ! type "zsh" > /dev/null ; then
   # Install zShell
-  echo -e '\nInstalling zShell...\n'
+  echo -e '\nInstalling zShell and Oh-My-ZSH framework...\n'
   brew install zsh zsh-completions
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+
 
