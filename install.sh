@@ -56,12 +56,12 @@ alias lf='colorls -f'
 alias lc='colorls -lA --sd'" >> $PATH_TO_ZSH/.zshrc
 fi
 
-if [ ! -f "$HOME/.oh-my-zsh/custom/themes/1spaceship.zsh-theme" ]; then
+if [ ! -f "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" ]; then
   # Install Spaceship theme
   echo -e '\nInstalling Oh-My-ZSH Spaceship Theme...\n'
-  # git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-  # #setup simlink for theme
-  # ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+  #setup simlink for theme
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
   echo -e "
 
 ###  Spaceship Prompt settings
@@ -358,5 +358,4 @@ SPACESHIP_EXIT_CODE_COLOR=\"red\"
 test -e \"${HOME}/.iterm2_shell_integration.zsh\" && source \"${HOME}/.iterm2_shell_integration.zsh\"
 
 " >> $PATH_TO_ZSH/.zshrc
-
 fi
