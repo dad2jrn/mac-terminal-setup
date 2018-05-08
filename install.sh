@@ -359,3 +359,24 @@ test -e \"${HOME}/.iterm2_shell_integration.zsh\" && source \"${HOME}/.iterm2_sh
 
 " >> $PATH_TO_ZSH/.zshrc
 fi
+
+if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme" ]; then
+  # Install Spaceship theme
+  echo -e '\nInstalling Oh-My-ZSH Spaceship Theme...\n'
+  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
+  #setup simlink for theme
+  rm -f $HOME/.zshrc
+  curl http://example.com -o $HOME/.zshrc -s
+
+
+
+####  Set iTerm2 settings
+
+echo -e "\nManual Settings you must perform to finish setup...\n
+Step 1) Open $HOME/.zshrc and edit the line `ZSH_THEME=\"robbyrussell\"` and change to `ZSH_THEME=\"spaceship\"`
+
+Step 2) Open iTerm2 > Preferences > Text and set both `Font` and `Non-ASCII Font` to `Monoid Nerd Font Mono`
+
+Step 3)
+
+" >
