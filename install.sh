@@ -14,3 +14,10 @@ if [ ! -d "/Applications/iTerm.app/Contents/MacOS/iTerm2" ]; then
   brew cask install iterm2
 fi
 
+# check if zsh is installed
+if ! type "zsh" > /dev/null ; then
+  # Install zShell
+  echo -e '\nInstalling zShell...\n'
+  brew install zsh zsh-completions
+fi
+
