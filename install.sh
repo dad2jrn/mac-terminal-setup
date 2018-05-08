@@ -23,4 +23,9 @@ if ! type "zsh" > /dev/null ; then
 fi
 
 
-
+#check if monoid font is present
+if [ ! -f "/$HOME/Library/Fonts/Monoid Regular Nerd Font Complete.ttf" ]; then
+  # Install patched Monoid fonts and Fira Code fonts
+  brew tap caskroom/fonts
+  brew cask install font-monoid-nerd-font
+fi
