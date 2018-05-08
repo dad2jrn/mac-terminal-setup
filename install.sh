@@ -59,7 +59,7 @@ fi
 if [ ! -f "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" ]; then
   # Install Spaceship theme
   echo -e '\nInstalling Oh-My-ZSH Spaceship Theme...\n'
-  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+  git clone -q https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   #setup simlink for theme
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
   echo -e "
@@ -362,21 +362,19 @@ fi
 
 if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme" ]; then
   # Install Spaceship theme
-  echo -e '\nInstalling Oh-My-ZSH Spaceship Theme...\n'
-  git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
+  echo -e '\nInstalling Oh-My-ZSH PowerLevel9K Theme...\n'
+  git clone -q https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
   #setup simlink for theme
   rm -f $HOME/.zshrc
-  curl http://example.com -o $HOME/.zshrc -s
-
+  curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.conf -o $HOME/.zshrc -s
+fi
 
 
 ####  Set iTerm2 settings
 
 echo -e "\nManual Settings you must perform to finish setup...\n
-Step 1) Open $HOME/.zshrc and edit the line `ZSH_THEME=\"robbyrussell\"` and change to `ZSH_THEME=\"spaceship\"`
-
-Step 2) Open iTerm2 > Preferences > Text and set both `Font` and `Non-ASCII Font` to `Monoid Nerd Font Mono`
-
+Step 1) Open $HOME/.zshrc and edit the line ZSH_THEME=\"robbyrussell\" and change theme name to 'powerlevel9k' or 'spaceship'.\n
+Step 2) Open iTerm2 > Preferences > Profiles > Text and set both 'Font' and 'Non-ASCII Font' to 'FuraMono Nerd Font'\n
 Step 3)
 
-" >
+"
