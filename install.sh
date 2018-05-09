@@ -18,11 +18,13 @@ if [ ! -f "/Applications/iTerm.app/Contents/MacOS/iTerm2" ]; then
 fi
 
 # check if zsh is installed
-if [ ! -d "/usr/local/bin/zsh" ]; then
+if [ ! -d "/usr/local/Cellar/zsh" ]; then
   # Install zShell
   echo -e '\nInstalling zShell and Oh-My-ZSH framework...\n'
-  brew install zsh zsh-completions zsh-syntax-highlighting
+  brew install zsh zsh-completions
+  brew install zsh-syntax-highlighting
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  ln -s /usr/local/Cellar/zsh-syntax-highlighting/0.6.0/share/zsh-syntax-highlighting/ $HOME/.oh-my-zsh/zsh-syntax-highlighting
 fi
 
 #check if monoid font is present
@@ -45,7 +47,7 @@ fi
 if ! type "colorls" > /dev/null; then
   # install ColorLS
   echo -e '\nInstalling the ColorLS...\n'
-  # gem install colorls
+  sudo gem install colorls
   echo -e "
 source $(dirname $(gem which colorls))/tab_complete.sh
 
