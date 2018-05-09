@@ -43,12 +43,13 @@ fi
 # Check if ColorLS is installed
 if ! type "colorls" > /dev/null; then
   # install ColorLS
-  echo -e '\nInstalling the ColorLS...\n'
+  echo -e '\nInstalling ColorLS...\n'
   sudo gem install colorls
 fi
 
+# Install PowerLEvel9K zsh theme
 if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme" ]; then
-  # Install Spaceship theme
+  # Install PowerLevel9k theme
   echo -e '\nInstalling Oh-My-ZSH PowerLevel9K Theme...\n'
   git clone -q https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
   #setup simlink for theme
@@ -57,7 +58,6 @@ if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme" ]
 fi
 
 ####  Set iTerm2 settings
-
 echo -e "\nManual Settings you must perform to finish setup...\n
 Step 1) Open $HOME/.zshrc and edit the line ZSH_THEME=\"robbyrussell\" and change theme name to \"powerlevel9k\".\n
 Step 2) Open iTerm2 and go to Preferences > Profiles > Text and set to \"FuraMono Nerd Font\"\n
