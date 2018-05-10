@@ -60,9 +60,9 @@ install() {
 
 	####  Set iTerm2 settings
 	echo -e "\nManual Settings you must perform to finish setup...\n
-  Step 1) Open $HOME/.zshrc and edit the line ZSH_THEME=\"robbyrussell\" and change theme name to \"powerlevel9k\".\n
-  Step 2) Open iTerm2 and go to Preferences > Profiles > Text and set to \"FuraMono Nerd Font\"\n
-  Step 3) Add any aliases to your $HOME/.zshrc file.
+  Step 1) Open iTerm2 and go to Preferences > Profiles > Text and set to \"FuraMono Nerd Font\"\n
+  Step 2) Add any aliases to your $HOME/.zshrc file.
+          - link to common alias ideas: (https://natelandau.com/my-mac-osx-bash_profile/)
   "
 }
 
