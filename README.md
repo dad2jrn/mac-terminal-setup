@@ -5,3 +5,4 @@ setup for MacOS iTerm2 with ZSH, Oh-My-ZSH, Nerd Font, ColorLS, & PowerLevel9k t
 
 ## Screenshot
 
+![Screenshot](/img/screenshot1.png?raw=true "Screenshot")
