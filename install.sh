@@ -56,7 +56,9 @@ install() {
 		#setup simlink for theme
 		rm -f $HOME/.zshrc
 		curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.conf -o $HOME/.zshrc -s
-		curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.zsh -o $HOME/
+		if [ ! -f "$HOME/powerlevel9k.zsh" ]; then
+			curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.zsh -o $HOME/powerlevel9k.zsh
+		fi
 	fi
 
 	####  Set iTerm2 settings
@@ -64,6 +66,7 @@ install() {
   Step 1) Open iTerm2 and go to Preferences > Profiles > Text and set to \"FuraMono Nerd Font\"\n
   Step 2) Add any aliases to your $HOME/.zshrc file.
           - link to common alias ideas: (https://natelandau.com/my-mac-osx-bash_profile/)
+					- link to PowerLevel9k theme documentation: (https://github.com/bhilburn/powerlevel9k/wiki)
   "
 }
 
