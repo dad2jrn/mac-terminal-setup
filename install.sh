@@ -56,6 +56,7 @@ install() {
 		#setup simlink for theme
 		rm -f $HOME/.zshrc
 		curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.conf -o $HOME/.zshrc -s
+		curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.zsh -o $HOME/
 	fi
 
 	####  Set iTerm2 settings
