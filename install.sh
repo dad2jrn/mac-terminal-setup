@@ -57,7 +57,7 @@ install() {
 		rm -f $HOME/.zshrc
 		curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.conf -o $HOME/.zshrc -s
 		if [ ! -f "$HOME/powerlevel9k.zsh" ]; then
-			curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlvl9k.zsh -o $HOME/powerlevel9k.zsh
+			curl https://raw.githubusercontent.com/dad2jrn/mac-terminal-setup/master/powerlevel9k.zsh -o $HOME/powerlevel9k.zsh
 		fi
 	fi
 
